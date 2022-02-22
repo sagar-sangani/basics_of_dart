@@ -152,90 +152,10 @@ For example :-
 void main() {
   String name = 'My name is Joseph';
   String age = 'and I am 35 years old.';
-  print(name + age);
+  print(name + ' ' + age);
 }
 ```
-    Output is : My name is Josephand I am 35 years old.
-
-
-# `Dynamic data type`
-
- - keyword `dynamic`
- - Dynamic data types are dynamic in nature and don't require initialization at the time of declaration. It also means that a dynamic type `does not have a predefined type and can be used to store any type of data`.
-
-
-
-# `List data type` 
-
-- keyword `List` 
-
-- A list is used to represent a collection of objects. It is an ordered group of objects.
-
-
-`1) Fixed length list`
-
-`2) growable list :-`
-
-- There are two ways in which you can define a Growable List in Dart. They are:
-
-    a) Assign a List of items directly to a variable.
-
-    b) Create an empty list with no arguments passed to List() in new List().
-
-For example :- we define a `Growable List` by assigning a list of items directly to a variable.
-
-```dart
-void main(){
-    List myList = [5, 13, 43];  
-    print(myList);
-     
-    //add item to growable list
-    myList.add(64);
-
-    print(myList);
-}
-```
-    Output is : [5, 13, 43]
-                [5, 13, 43, 64]
-
-For example :- we define an `empty Growable List` by passing no arguments to List() class and then adding items to the list.
-
-```dart
-
-void main() {
-    List myList = [];
-     
-    myList.add(24);
-    myList.add(76);
-    myList.add(91);
-    myList.add(42);
-     
-    print(myList);
-}
-```
-    Output is : [24, 76, 91, 42]
-
-# `Map data type` 
-
-- keyword `Map`
-
-- To declare a map using map literals, you need to enclose the key-value pairs within a pair of curly brackets `{ }`.
-
-- The Map object is a simple key/value pair.
-
-- Keys and values in a map may be of any type.
-
-- A Map is a dynamic collection. 
-
-- Maps can be declared in two ways −
-
-`1) Using Map Literals`
-
-`2) Using a Map constructor`
-
- 
-- It represents a set of values as key-value pairs.
-
+    Output is : My name is Joseph and I am 35 years old.
 
 
 # `Operator's`
@@ -565,3 +485,78 @@ void main() {
 ```    
     Output is : Guest User
     
+# `List data type` 
+
+- It is an ordered group of objects
+- List is used to represent a collection of objects
+
+- keyword `List`  
+
+`1) Fixed length list`
+
+`2) growable list :-`
+
+- There are two ways in which you can define a Growable List in Dart. They are:
+
+    a) Assign a List of items directly to a variable.
+
+    b) Create an empty list with no arguments passed to List() in new List().
+
+For example :- we define a `Growable List` by assigning a list of items directly to a variable.
+
+```dart
+void main(){
+    List myList = [5, 13, 43];  
+    print(myList);
+     
+    //add item to growable list
+    myList.add(64);
+
+    print(myList);
+}
+```
+    Output is : [5, 13, 43]
+                [5, 13, 43, 64]
+
+For example :- we define an `empty Growable List` by passing no arguments to List() class and then adding items to the list.
+
+```dart
+
+void main() {
+    List myList = [];
+     
+    myList.add(24);
+    myList.add(76);
+    myList.add(91);
+    myList.add(42);
+     
+    print(myList);
+}
+```
+    Output is : [24, 76, 91, 42]
+
+# `Map data type` 
+
+- keyword `Map`
+
+- To declare a map using map literals, you need to enclose the key-value pairs within a pair of curly brackets `{ }`.
+
+- The Map object is a simple key/value pair.
+
+- Keys and values in a map may be of any type.
+
+- A Map is a dynamic collection. 
+
+- Maps can be declared in two ways −
+
+`1) Using Map Literals`
+
+`2) Using a Map constructor`
+
+ 
+- It represents a set of values as key-value pairs.
+
+# `Dynamic data type`
+
+- keyword `dynamic`
+- Dynamic data types are dynamic in nature and don't require initialization at the time of declaration. It also means that a dynamic type `does not have a predefined type and can be used to store any type of data`.
