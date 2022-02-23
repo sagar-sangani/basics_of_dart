@@ -1063,9 +1063,9 @@ void main(){
                5
 
 
-# `Functions`
+# `Function`
 
-- Functions represent actions an object can take. They are also at times referred to as methods.
+- Function represent actions an object can take. They are also at times referred to as methods.
 
 - Function can be defined as collection of statements grouped together to perform  specific operation.
   
@@ -1077,7 +1077,7 @@ void main(){
 
 - if no return value is specified the function return null 
 
-- Syntax of any unction is given below
+- Syntax of any function is given below
 ## Defining a function
 
 ```dart
@@ -1091,13 +1091,32 @@ returnType function_name(){
   statement block;
 }
 ```
-## calling a function
+## `calling a function`
 
 ```dart
 function_name()
 ```
 
-Example of function:-
+## `Function without parameter`
+
+### `1) Without return type`
+
+- For Example :-
+
+```dart
+myfun() {
+  print("Hello Dart");
+}
+ void main(){
+   myfun();
+ }
+```
+    Output is : hello Dart
+
+### `2) with return type`
+
+- For Example :-
+
 ```dart
 int add_Number(){
   int a = 10;
@@ -1111,15 +1130,21 @@ void main(){
 ```
     Output is : 30
 
-For Example :- `Pass parameter to a function`
 
+## `Function with parameter`
+
+### 1) `Pass parameter to a function`
+
+- `A) Without return value from function`
+
+- For Example :- 
 
 ```dart
 void main() {
-  areaOfRectangle (20,10);
+  areaOfRectangle(20,10);
 }
 
- void areaOfRectangle (int length,int height) {
+ void areaOfRectangle(int length,int height) {
    
    int area = (length * height);
    print('area of rectangle is $area');
@@ -1128,7 +1153,9 @@ void main() {
 ```
     Output is : area of rectangle is 200
 
-For example :- `return value from a function`
+- `B) return value from a function`
+
+- For Example :- 
 
  ```dart
 void main() {
@@ -1136,7 +1163,7 @@ void main() {
   print('area of the rectangle is $area');
 }
 
- int areaOfRectangle (int length,int height) {
+ int areaOfRectangle(int length,int height) {
    
    int area = (length * height);
    return area;  
@@ -1144,22 +1171,25 @@ void main() {
 ```
     Output is :- area of rectangle is 200
 
-For example :- `expression in function using short hand syntax or fat arrow`
+### 2) `expression in function using short hand syntax or fat arrow`
 
+- For Example :- 
 
 ```dart
  void main() {
-  areaOfRectangle (18,10);
+  areaOfRectangle(18,10);
 }
 
- void areaOfRectangle (int length,int height) => print('area of rectangle is ${(length * height)}');
+ void areaOfRectangle(int length,int height) => print('area of rectangle is ${(length * height)}');
 
 ```
     Output is :- area of rectangle is 180
 
-  ## Note
+# Note
 
 - `when we use fat arrow then don't write return keyword before the expression`
+
+- For Example :-
 
 ```dart
 void main() {
@@ -1167,25 +1197,27 @@ void main() {
   print('area of the rectangle is $area');
 }
 
- int areaOfRectangle (int length,int height)  => length* height;
+ int areaOfRectangle(int length,int height)  => length* height;
 
 ```   
 Output is :- area of rectangle is 500
 
 
-# Parameter
+# `Parameter In Function`
 
 - There are two types of parameter which is listed below
 
-## 1) Required parameter 
+## `1) Required parameter` 
 
 - In our function we can not skip any parameter
 - if we skip any parameter then our program will give an error
 
+- For Example :-
+
 ```dart
 void main() {
   
-  cityName ("jamnagar","rajkot","surat");
+  cityName("jamnagar","rajkot","surat");
 }
 
 void cityName(String n1,String n2,String n3) {
@@ -1198,21 +1230,21 @@ void cityName(String n1,String n2,String n3) {
                  Name of city is rajkot
                  Name of city is surat
 
-## 2) Optional positional parameter
+## `2) Optional positional parameter`
 
 - In this case we can skip the parameter as per our choice
 
 - to skip any parameter put that parameter in sqare bracket`[ ]` and put the nullable operator `? before the parameter` in the function.
 
 
-For example :- 
+- For Example :-
 
 -  In this example we can skip third city name 
 
 ```dart
 void main() {
   
-  cityName ("jamnagar","rajkot");
+  cityName("jamnagar","rajkot");
 }
 
 void cityName(String n1,String n2,[String ?n3]) {
@@ -1225,23 +1257,23 @@ void cityName(String n1,String n2,[String ?n3]) {
                 Name of city is rajkot
                 Name of city is null 
    
-## 3) Optional named parameter
+## `3) Optional named parameter`
 
 - named parameter is used to prevent error if there is large number of the parameter.
 
 - If we want to make any parameter to named parameter then put that parameter in to the `{ }` curly bracket where it is defined.
 
-- In named parameter sequence of parameter is doesn't matters
+- `In named parameter sequence of parameter is doesn't matters`
 
-For example 
+- For Example :-
 
 ```dart
 void main() {
   
-  volumeOfRectangle (10,width: 15,height: 20);
+  volumeOfRectangle(10,width: 15,height: 20);
 }
 
-void volumeOfRectangle (
+void volumeOfRectangle(
   int length,
   {required int height,
    required int width
@@ -1252,18 +1284,35 @@ void volumeOfRectangle (
   print("volume of rectangle is ${length * height * width}");
 }
 ```
+`OR`
+```dart
+void volumeOfRectangle(
+  int length,
+  {required int height,
+   required int width
+   }
+) {
+  print("volume of rectangle is ${length * height * width}");
+}
+  
+void main() {
+  
+  volumeOfRectangle(10,width: 15,height: 20);
+
+}
+```
     Output is : volume of rectangle is 3000
 
 
-- Otherwise we can also write this program in another way
+- `Otherwise we can also write this program in another way`
 
 ```dart
 void main() {
   
-  volumeOfRectangle (10,width: 15,height: 20);
+  volumeOfRectangle(10,width: 15,height: 20);
 }
 
-void volumeOfRectangle (
+void volumeOfRectangle(
   int length,
   {
     int? height,
@@ -1279,17 +1328,19 @@ void volumeOfRectangle (
 ```
     Output is :  volume of rectangle is 3000
 
-## 4) Optional default parameter
+## `4) Optional default parameter`
 
 - we can asign default value to parameters
+
+- For Example :-
 
 ```dart
 void main() {
   
-  volumeOfRectangle (10,20);
+  volumeOfRectangle(10,20);
 }
 
-void volumeOfRectangle (
+void volumeOfRectangle(
   int length,
   int width,
   {int height = 30
@@ -1300,15 +1351,18 @@ void volumeOfRectangle (
   print("volume of rectangle is ${length * height * width}");
 }
 ```
-- Other if we don't want to give default value then give the value in the function. 
+
+### `- Other if we don't want to give default value then give the value in the function. `
+
+- For Example :-
 
 ```dart
 void main() {
   
-  volumeOfRectangle (10,15,height : 20);
+  volumeOfRectangle(10,15,height : 20);
 }
 
-void volumeOfRectangle (
+void volumeOfRectangle(
   int length,
   int width,
   {
@@ -1322,6 +1376,57 @@ void volumeOfRectangle (
 
 ```
     Output is : volume of rectangle is 3000
+
+# `Anonymous Function`
+
+- A function which has no name is called anonymous function.
+
+- `Syntax of anonymous function for Multiple Statements`
+
+```dart
+  () {
+    // Multiple Statements
+  }
+```
+- For Example :-
+
+```dart
+void main() {
+  List<String> student = ['Rohan', 'Ajay','Rahul'];
+ 
+ student.forEach((value) {
+   print(value);
+   } );
+  
+}
+```
+    Output is : Rohan
+                Ajay
+                Rahul
+
+- `Syntax of anonymous function for Single Statement` It's called as a `Arrow function`
+
+```dart
+
+  () => Single Statement ;
+
+```
+
+- For Example :-
+
+```dart
+void main() {
+  List<String> student = ['Rohan', 'Ajay','Rahul'];
+ 
+ student.forEach((value) => print(value));
+    
+}
+
+```
+    Output is : Rohan
+                Ajay
+                Rahul
+
 
 # `class`
 
@@ -1547,3 +1652,63 @@ void main() {
 # `Method override`
 
 - Method overriding is mechanism by which the child class redefines a method in it's parent class.
+
+
+
+
+
+
+
+# `Practice`
+
+## `finding prime number from 1 to 100`
+
+```dart
+void main() {
+  
+  int a ;
+
+    for(int n = 1; n <= 100; n++) {
+      a = 0;
+      for(int i = 1; i<= n; i++) {
+        if(n % i == 0) {
+          a++;
+        }
+      }
+    
+      if(a == 2) {
+        print("Prime number $n");
+      }
+  //     else {
+  //       print("Hello not Prime number");
+  //     }
+    }
+
+}
+```
+    Output is: 
+                Prime number is 2
+                Prime number is 3
+                Prime number is 5
+                Prime number is 7
+                Prime number is 11
+                Prime number is 13
+                Prime number is 17
+                Prime number is 19
+                Prime number is 23
+                Prime number is 29
+                Prime number is 31
+                Prime number is 37
+                Prime number is 41
+                Prime number is 43
+                Prime number is 47
+                Prime number is 53
+                Prime number is 59
+                Prime number is 61
+                Prime number is 67
+                Prime number is 71
+                Prime number is 73
+                Prime number is 79
+                Prime number is 83
+                Prime number is 89
+                Prime number is 97
