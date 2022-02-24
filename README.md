@@ -1876,6 +1876,16 @@ method_name() {
 
 # `Exception Handling`
 
+## Built-in Exceptions in Dart: 
+
+- 1) Deferred Load Exception
+- 2) Format Exception
+- 3) Integer Divison by Zero Exception
+- 4) 10 Exception
+- 5) Isolate Spawn Exception
+- 6) Timeout
+- 7) others...
+
 ## `try Catch`
 
 ```dart
@@ -1883,14 +1893,43 @@ void main () {
 try {
     int result = 12 ~/ 0;
      print(result);
-  } catch (error){
-    print('can not be devided by zero');
+  } catch (e){
+    print(e);
   } 
 }
 ```
     Output is :  can not be devided by zero
 
+## `Finally`
 
+- Final block: The final block in dart is used to include specific code that `must be executed irrespective of error in the code.` Although it is optional to include finally block if you include it then it should be after try and catch block are over.
+
+```dart
+
+finally {
+   
+   // Statement blocks
+
+}
+```
+For Example :-
+
+```dart
+void main () {
+  
+try {
+    int result = 12 ~/ 0;
+     print(result);
+  } catch (e){
+    print(e);
+  } 
+  finally {
+    print("Thank you for your support");
+  }
+```
+    Output is : Unsupported operation: Result of truncating division is Infinity: 12 ~/ 0
+                Thank you for your support
+                
 # `Practice`
 
 ## `finding prime number from 1 to 100`
