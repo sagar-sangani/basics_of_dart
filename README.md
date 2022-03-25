@@ -1983,3 +1983,175 @@ void main() {
                 Prime number is 83
                 Prime number is 89
                 Prime number is 97
+
+# Reserved Keyword
+
+- `void`
+
+- `if`
+
+- `else`
+
+- `for`
+
+- `do`
+
+- `while`
+
+- `with`
+
+- `class`
+
+- `enum`
+
+- `true`
+
+- `false`
+
+- `this`
+
+- `is`
+
+- `in`
+
+- `const`
+
+- `final`
+
+- `null`
+
+- `switch`
+
+- `case`
+
+- `try`
+
+- `catch`
+
+- `return`
+
+- `throw`
+
+- `rethrow`
+
+- `default`
+
+- `break`
+
+- `continue`
+
+- `finally`
+
+- `super`
+
+- `var`
+
+- `extends`
+
+- `assert`
+
+- `new`
+
+# Contextual keywords
+## which have meaning only in specific places. They’re valid identifiers everywhere.
+
+
+- `show`
+
+- `async`
+
+- `sync`
+
+- `on`
+
+- `hide`
+
+# Built-in identifiers
+
+## These keywords are valid identifiers in most places, but they can’t be used as class or type names, or as import prefixes.
+
+
+- `required`
+
+- `as`
+
+- `function `
+
+- `abstract`
+
+- `static`
+
+- `late`
+
+- `factory`
+
+- `get`
+
+- `import`
+
+- `export`
+
+- `set`
+
+- `interface`
+
+- `extension`
+
+- `implements`
+
+- `external`
+
+- `library`
+
+- `mixin`
+
+- `typedef`
+
+- `operator`
+
+- `covariant`
+
+- `part`
+
+- `deferred`
+
+- `dynamic`
+
+# limited reserved words related to `asynchrony` support. 
+
+## You can’t use await or yield as an identifier in any function body marked with async, async*, or sync*.
+
+
+- `await`
+
+- `yeild`
+
+# assert keyword
+
+```dart
+assert(test condition which result is bool value,"message to show while condition give false value");
+```
+
+```dart
+// assert keyword
+void main() {
+  var list = [1, 2, 3];
+
+assert(list.length == 3,"you have entered wrong condition");
+  print('condition 1 ok');
+
+assert(list[1] == 2,"you have entered wrong condition");
+  print('condition 2 ok');
+
+list[1] = 1;
+assert(list[1] == 1,"you have entered wrong condition");
+
+  print('condition 3 ok');
+}
+```
+    Output is :-  condition 1 ok
+                  condition 2 ok
+                  condition 3 ok
+  
+## `Note` 
+ - If any of the above condition becomes false then program execution will be stop there and given the error message
