@@ -841,7 +841,7 @@ void main()
     var a = -10;
     if(a > 0)
       {
-        print("a is positive integer ");
+        print("a is positive number ");
        }
     else if(a==0)
       {
@@ -849,7 +849,7 @@ void main()
         }
       else 
         {
-          print("a is negative integer");
+          print("a is negative number");
           }
 
 }
@@ -971,6 +971,7 @@ void main() {
   int i=0;
   while(i < student.length) {
     print(student[i]);
+    i++;
   }
 }
 ```
