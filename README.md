@@ -1849,6 +1849,70 @@ void main() {
 
     Output is: laptop brand Apple laptop colour is Silver and price is only 85000
 
+# `const keyword`
+
+- `A variable declared with the const keyword cannot have any other value given to it.`
+
+- The variable is also known as a `compile-time constant.` 
+
+- It means that its `value must be declared while the program is being compiled.`
+
+- A const variable `can not be reassigned once declared` in a program.
+
+- When we use const on an object, the object’s whole deep state is rigidly fixed at compilation time, and the object is deemed frozen and entirely immutable.
+
+## Syntax
+
+```dart
+// Without datatype
+const variable_name;
+
+// With datatype
+const data_type  variable_name;
+```
+
+For Example:-
+
+```dart
+void main() {
+   
+  // Declaring and assigning variable without datatype
+  // using const keyword
+  const x = 5;
+   
+  // display value
+  print(x);
+    
+  // Declaring and assigning variable with datatype
+  // using const keyword
+  const int y = 10;
+   
+  // display value
+  print(y);
+}
+```
+    Output is: x = 5
+               y = 10
+
+Note :-
+```dart
+- The compiler will throw an error if we try to reassign the values in the above code.
+```
+
+Example with error:-
+```dart
+void main(){
+   // declaring variable
+   const num = 25;
+   print(num);
+
+   // Reassigning the value
+   num = 10;
+   print(num);
+}
+```
+    Output is: Constant variables can't be assigned a value.
+
 
 # `Static keyword`
 
