@@ -1695,66 +1695,62 @@ Another Example :-
 
 ```dart
 void main() {
-  
   var dog = Dog();
-  
+
   dog.name = "raja";
   dog.breed = "Lebra";
   dog.colour = "Black";
   dog.age = 2;
-  
-  
+
   print(""" Dog name is ${dog.name}.
   Breed is ${dog.breed}.
   colour is ${dog.colour}.
   age is ${dog.age} """);
-  
+
   dog.eat();
   dog.bark();
-  
+
   var cat = Cat();
-  
+
   cat.name = "Shila";
   cat.colour = "White";
   cat.age = 1;
-  
+
   print(""" Cat name is ${cat.name}.
   Breed is ${cat.breed}.
   colour is ${cat.colour}.
   age is ${cat.age} """);
-  
+
   cat.eat();
-  cat.meow(); 
+  cat.meow();
 }
 
 // parent class / Super class
-class Animal{
-  
-  String ?name;
-  String ?breed;
-  String ?colour;
-  int ?age;
-    
-    void eat(){
-    print('Eat veg and non veg'); 
+class Animal {
+  String? name;
+  String? breed;
+  String? colour;
+  int? age;
+
+  void eat() {
+    print('Eat veg and non veg');
   }
 }
+
 // child class / Sub class
-class Dog extends Animal{
-  
+class Dog extends Animal {
   void bark() {
     print('Bark  !');
   }
-  
 }
+
 // child class / Sub class
-class Cat extends Animal{
-   
+class Cat extends Animal {
   void meow() {
     print('Meow  !');
   }
-  
 }
+
 ```
     Output is : Dog name is raja.
                 Breed is Lebra.
@@ -1814,41 +1810,214 @@ void main() {
   String brandname;
   String colour;
   int price;
-  
+
   Laptop({
     required this.brandname,
     required this.colour,
     required this.price,
   });
-  
- 
 }
 
 class AppleLaptop extends Laptop {
-  
   int applePrice;
+  @override
   String colour;
-  
+
   AppleLaptop({
     required this.applePrice,
     required this.colour,
-  }): super(brandname: "Apple", price: applePrice, colour: "Silver");
-  
-  
-  
+  }) : super(
+          brandname: "Apple",
+          price: applePrice,
+          colour: "Silver",
+        );
 }
 
 void main() {
-  AppleLaptop mackbookAir = AppleLaptop(applePrice: 85000,colour: "Silver");
+  AppleLaptop mackbookAir = AppleLaptop(
+    applePrice: 85000,
+    colour: "Silver",
+  );
 //   print(mackbookAir.price);
 //   print(mackbookAir.colour);
-  
-  print('laptop brand ${mackbookAir.brandname} laptop colour is ${mackbookAir.colour} and price is only ${mackbookAir.price} ');
-  
+
+  print(
+      'laptop brand ${mackbookAir.brandname} laptop colour is ${mackbookAir.colour} and price is only ${mackbookAir.price}');
 }
+
 ``` 
 
     Output is: laptop brand Apple laptop colour is Silver and price is only 85000
+
+
+# `Static keyword`
+
+- "static" means a member is available on the class itself instead of on instances of the class. 
+
+- By using static keyword while creating the variable you will be `able to access to the variable or the method without creating the object of the class`.
+
+- If we do not use the static keyword
+then when we create a variable or method in a class then we have to `create an object of that class to access the variable or method.`
+
+## `When to use static keyword`
+
+- When we need to declare common properties in our app like strings, colors, sizes we can create static variables or methods to delare that.
+
+## `Declare static variable`
+
+```dart
+//To declare a static variable
+static [data_type] [variable_name];
+
+// To access a static variable
+ClassName.staticVariableName; 
+
+```
+
+## `Declare static methods`
+
+```dart
+static [ReturnType] [MethodName]{
+  // commands goes here
+}
+```
+
+## `Note`
+
+```dart
+- When a non-static attribute is accessed within a static function, an error is thrown. This is because a `static method can only access the class’s static variables`. For example, it can access a non-static attribute within a static function.
+```
+
+For example:-
+
+```dart
+class Car {
+  static const numberOfWheels = 4;
+  String? name;
+  Car({this.name});
+
+//   Static method
+  static startCar() {
+    return 'Car is starting';
+  }
+}
+
+void main() {
+  print(Car.numberOfWheels); //here we use a static variable.
+
+//   print(Car.name);  // this gives an error we can not access this property without creating  an instance of Car class.
+
+  print(Car.startCar()); //here we use a static method.
+
+  Car car =
+      Car(); // we have to create instance of car then we can access the name
+  car.name = 'Honda';
+  print(car.name);
+}
+```
+
+    Output is: 4
+               Car is starting
+               Honda
+
+
+Another Example:-
+
+## `With static keyword`
+
+```dart
+class MyColors {
+  static const primaryColor = 'Red';
+  static const secondaryColor = 'Green';
+
+  static void printColor(String color) {
+    print("Color is $color");
+  }
+}
+
+void main() {
+  String primaryColor = MyColors.primaryColor;
+  MyColors.printColor('yellow');
+}
+```
+
+    Output is: Color is yellow
+
+## `Without Static keyword`
+
+```dart
+class MyColors {
+  final primaryColor = 'Red';
+  final secondaryColor = 'Green';
+
+  void printColor(String color) {
+    print('Color is $color');
+  }
+}
+
+void main() {
+  String primaryColor = MyColors().primaryColor;
+  MyColors().printColor('Blue');
+}
+```
+    Output is: Color is Blue
+
+
+One more example:-
+```dart
+class Student {
+  String? roll_no;
+  String? level;
+
+  // Declaring a static variable
+  static var department;
+  
+  // Function to print details of the student
+  displayDetails() {
+    print("The student with roll number ${roll_no} is in level ${level}.");
+    print("The student studies ${department}");
+  }
+}
+
+void main() {
+  Student st1 = Student();
+
+  // Accessing the static variable
+  Student.department = "Computer Sci";
+
+  // Assigning value to variables using the class object
+  st1.roll_no = '1238AS23';
+  st1.level = '400l';
+  
+  // Invokeing the method displayDetails
+  st1.displayDetails();
+}
+```
+    Output is: The student with roll number 1238AS23 is in level 400l.
+               The student studies Computer Sci
+
+Example with error:-
+
+```dart
+class Student { 
+  // Declaring the non-static  variable
+    String? name;
+   //Declaring the static method  
+   static display() { 
+      print("The student name is ${name}")  ; 
+   } 
+}  
+void main() { 
+  // Creating an object of the class Student
+  Student st1 = Student();
+  // Accessing the non-static variable
+   st1.name = 'Maria';
+    
+   // Invoking the static method
+   Student.display();   
+}
+```
+    Output is: Instance members can't be accessed from a static method.
 
 # `Abstract Class and Abstract Method`
 
