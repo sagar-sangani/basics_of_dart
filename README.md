@@ -8,12 +8,12 @@ For example :-
 
 ```dart
 void main() {
-    int marks = 83;
-    String student_name = "Max";
-    double percentage = 89.46;
-    print(marks);
-    print(student_name);
-    print(percentage);
+  int marks = 83;
+  String studentName = "Max";
+  double percentage = 89.46;
+  print(marks);
+  print(studentName);
+  print(percentage);
 }
 ```
     Output is : 83
@@ -55,9 +55,9 @@ For example :-
 void main() {
   String a1 = 'Coding is';
   String a11 = 'Fun';
-	
-  bool result= (a1==a11);
-  print (result);
+
+  bool result = (a1 == a11);
+  print(result);
 }
 ```
     Output is : false
@@ -71,9 +71,9 @@ For example :-
 
 ```dart
 void main() {
-   int num1 = 2;
-   print("You have entered value is : $num1");
-  }
+  int num1 = 2;
+  print("You have entered value is : $num1");
+}
 ```
     Output is : You have entered value is : 2
 
@@ -118,10 +118,9 @@ For Example :- Single line String
 
 ```dart
 void main() {
-	
-	String str = 'Son of Ram is ';
-	String str1 = 'lav and kush';
-	print (str + str1);
+  String str = 'Son of Ram is ';
+  String str1 = 'lav and kush';
+  print(str + str1);
 }
 ```
     Output is : son of Ram is lav and kush
@@ -130,10 +129,9 @@ void main() {
 
 ```dart
     void main() {
-	
-	String str = '''Sita is wife of Ram.
+  String str = '''Sita is wife of Ram.
                   Lav and kush is son of Ram & Sita. ''';
-	print (str);
+  print(str);
 }
 ```
     Output is : Sita is wife of Ram.
@@ -191,12 +189,12 @@ For Example :-
 ## `1) Prefix increment/decrement operator`
 
 ```dart
-    void main() {   
-      int x = 30;
-      int y = 15;   
-      print(++x);                //The prefix increment value
-      print(--y);                //The prefix decrement value  
-  }
+void main() {
+  int x = 30;
+  int y = 15;
+  print(++x); //The prefix increment value
+  print(--y); //The prefix decrement value
+}
 ```
 
     Output is : x=31 
@@ -206,16 +204,16 @@ For Example :-
 ##`2) Postfix increment/decrement operator`
 
 ```dart
-      void main() {   
-        int x = 30;
-        int y = 15;   
-        print(x++);                //The postfix increment value
-        print(y--);                //The postfix decrement value  
-      }
+void main() {
+  int x = 30;
+  int y = 15;
+  print(x++); //The postfix increment value
+  print(y--); //The postfix decrement value
+}
 ``` 
 
-         Output is : x=30 
-                     y=15
+    Output is : x=30 
+                y=15
 
 ## B) `Binary operator` 
 
@@ -225,12 +223,12 @@ For Example :-
 
     - It assigns the right expression to the left operand.
 ```dart
-      void main() {   
-        String firstName = "Sangani";
-        print('my surname ${firstName)}';
-      }
+void main() {
+  String firstName = "Sangani";
+  print('my surname $firstName');
+}
 ```
-        Output is : my surname is Sangani
+    Output is : my surname is Sangani
 
 ## `2) Arithmatic operator`
 
@@ -240,56 +238,56 @@ For Example :-
 - `It adds the left operand to the right operand.`
 
 ```dart
-    void main() {   
-        double x = 124.34;
-        double y = 158.58;
-        double c = x+y;
-        print('total is ${c}');
-      }  
+void main() {
+  double x = 124.34;
+  double y = 158.58;
+  double c = x + y;
+  print('total is $c');
+}
 ```
-        Output is :  total is 282.92
+    Output is :  total is 282.92
 
 - ## `b) Substraction ( - )` 
 
 - `It subtracts the right operand from the left operand.`
 
 ```dart
-      void main() {   
-        double x = 275.45;
-        double y = 158.58;
-        double c = x-y;
-        print('total is ${c}');
-      }
+void main() {
+  double x = 275.45;
+  double y = 158.58;
+  double c = x - y;
+  print('total is $c');
+}
 ```       
-        Output is :  total is 116.8699
+    Output is :  total is 116.8699
        
 - ## `c) Multiplication ( * )` 
 
 - `It multiplies the one operand to another operand.`
 
 ```dart
-      void main() {   
-        double x = 14.75;
-        double y = 19.47;
-        double c = x*y;
-        print('total is ${c}');
-      }
+void main() {
+  double x = 14.75;
+  double y = 19.47;
+  double c = x * y;
+  print('total is $c');
+}
 ``` 
-          Output is :  total is 287.1825     
+    Output is :  total is 287.1825     
 
 - ## `d) Division ( / )` 
 
 - `It divides the first operand by the second operand and returns quotient.`
 
 ```dart
-      void main() {   
-        double x = 278.47;
-        double y = 132.86;
-        double c = x/y;
-        print('total is ${c}');
-      }
+void main() {
+  double x = 278.47;
+  double y = 132.86;
+  double c = x / y;
+  print('total is $c');
+}
 ```
-          Output is :  total is 2.0959
+    Output is :  total is 2.0959
 
       
 - ## `e) Modulus ( % )`
@@ -297,14 +295,14 @@ For Example :-
 - `It returns a `reminder` after dividing one operand to another.`
 
 ```dart
-      void main() {   
-        double x = 147;
-        double y = 12;
-        double c = x%y;
-        print('reminder is ${c}');
-      }
+void main() {
+  double x = 147;
+  double y = 12;
+  double c = x % y;
+  print('reminder is $c');
+}
 ```
-          Output is : reminder is 3      
+    Output is : reminder is 3      
 
 ## `3) Comparision or Relational operator`
 
@@ -391,30 +389,30 @@ void main() {
 For Example :-
 
 ```dart
-  void main(){
-    var a = 30;
-    var b = 5;
-    print("Dart Short hand Operators");
-    a+=b;
-    print("a+=b : ${a}"); //(it's do a=a+b)
-    a-=b;
-    print("a-=b : ${a}"); //(it's do a=a-b)
-    a*=b;
-    print("a*=b : ${a}"); //(it's do a=a*b)
-    a~/=b;
-    print("a~/=b : ${a}");  //(it's do a=a/b)
-    a%=b;
-    print("a%=b : ${a}"); //(it's do a=a%b)
+void main() {
+  var a = 30;
+  var b = 5;
+  print("Dart Short hand Operators");
+  a += b;
+  print("a+=b : $a"); //(it's do a=a+b)
+  a -= b;
+  print("a-=b : $a"); //(it's do a=a-b)
+  a *= b;
+  print("a*=b : $a"); //(it's do a=a*b)
+  a ~/= b;
+  print("a~/=b : $a"); //(it's do a=a/b)
+  a %= b;
+  print("a%=b : $a"); //(it's do a=a%b)
 }
 ```
     
 
-      Output is:  - Dart Shorthand Operators
-                  - a+=b : 35
-                  - a-=b : 30
-                  - a*=b : 150
-                  - a~/=b : 30
-                  - a%=b : 0
+    Output is:  - Dart Shorthand Operators
+                - a+=b : 35
+                - a-=b : 30
+                - a*=b : 150
+                - a~/=b : 30
+                - a%=b : 0
 
 ## `5) Logical operator`
 
@@ -427,14 +425,15 @@ For Example :-
 For Example :-
 
 ```dart
-  void main() {  
-    int a = 10; 
-    int b = 12; 
-    var res = (a<b)&&(b>10); 
-    print(res);  
-}       
+void main() {
+  int a = 10;
+  int b = 12;
+  var res = (a < b) && (b > 10);
+  print(res);
+}
+
 ```
-      Output is: true
+    Output is: true
 
 
   - ## `b) OR operator ( || )`
@@ -442,30 +441,30 @@ For Example :-
     - `Returns true if any one condition is true.`
 
 ```dart
-  void main() {  
-   int a = 10; 
-   int b = 7; 
-   var res = (a<b)||(b>10); 
-   print(res);  
+void main() {
+  int a = 10;
+  int b = 7;
+  var res = (a < b) || (b > 10);
+  print(res);
 }
 ```
-      Output is: false
+    Output is: false
       
   - c) NOT operator  `!`
 
     - `Returns the inverse of the result.`
 
 ```dart
-void main() { 
-   var a = 20; 
-   var b = 17; 
-   var res = (a>b)||(b<10); 
-   
-   print('result is $res');  
-  
-   var res1 = !(a==b); 
-   print('result1 is $res1'); 
-}        
+void main() {
+  var a = 20;
+  var b = 17;
+  var res = (a > b) || (b < 10);
+
+  print('result is $res');
+
+  var res1 = !(a == b);
+  print('result1 is $res1');
+}
 ```
     Output is: result is true
                result1 is true
@@ -480,22 +479,22 @@ void main() {
 For Example :- 
  
 ```dart
-  void main() {
-      bool is_login = true;
-      String user = is_login ? 'Max' : 'Guest User';
-      print(user);
-  } 
+void main() {
+  bool isLogin = true;
+  String user = isLogin ? 'Max' : 'Guest User';
+  print(user);
+}
 ```
-      Output is:  Max
+    Output is:  Max
 
  or  
 
- ```dart
-  void main() {
-      bool is_login = false;
-      String user = is_login ? 'Max' : 'Guest User';
-      print(user);
-  } 
+```dart
+void main() {
+  bool isLogin = false;
+  String user = isLogin ? 'Max' : 'Guest User';
+  print(user);
+}
 ```    
     Output is : Guest User
     
@@ -523,14 +522,14 @@ For Example :-
 For example :- we define a `Growable List` by assigning a list of items `directly to a variable.`
 
 ```dart
-void main(){
-    List<int> myList = [5, 13, 43];  
-    print(myList);
-     
-    //add item to growable list
-    myList.add(64);
+void main() {
+  List<int> myList = [5, 13, 43];
+  print(myList);
 
-    print(myList);
+  //add item to growable list
+  myList.add(64);
+
+  print(myList);
 }
 ```
     Output is : [5, 13, 43]
@@ -544,28 +543,29 @@ For Example :-
 
 ```dart
 void main() {
-    List<int> myList = [];
-     
-    myList.add(24);
-    myList.add(76);
-    myList.add(91);
-    myList.add(42);
-     
-    print(myList);
+  List<int> myList = [];
+
+  myList.add(24);
+  myList.add(76);
+  myList.add(91);
+  myList.add(42);
+
+  print(myList);
 }
 ```
     Output is : [24, 76, 91, 42]
 Or
+
 ```dart
 void main() {
-    List myList = <int> [];
-     
-    myList.add(24);
-    myList.add(76);
-    myList.add(91);
-    myList.add(42);
-     
-    print(myList);
+  List myList = <int>[];
+
+  myList.add(24);
+  myList.add(76);
+  myList.add(91);
+  myList.add(42);
+
+  print(myList);
 }
 ```   
     Output is : [24, 76, 91, 42]
@@ -587,14 +587,20 @@ void main() {
 - Syntax 
 
 ```dart
-  var identifier = { key1:value1, key2:value2 [,…..,key_n:value_n] }
+var identifier = { key1:value1,
+                   key2:value2,
+                   [key3:value3,....,key_n:value_n],
+                    }
 ```
 For Example :-
 
 ```dart
-   void main() { 
-    var details = {'Usrname':'tom','Password':'pass@123'}; 
-    print(details); 
+void main() {
+  var details = {
+    'Usrname': 'tom',
+    'Password': 'pass@123',
+  };
+  print(details);
 }
 ```
     Output is : {Usrname: tom, Password: pass@123}
@@ -617,12 +623,12 @@ map_name[key] = value
 For Example :-
 
 ```dart
-void main() { 
-   var details = Map(); 
-   details['Usrname'] = 'admin'; 
-   details['Password'] = 'admin@123'; 
-   print(details); 
-} 
+void main() {
+  var details = {};
+  details['Usrname'] = 'admin';
+  details['Password'] = 'admin@123';
+  print(details);
+}
 ```
     Output is : {Usrname: admin, Password: admin@123}
 
@@ -633,7 +639,12 @@ void main() {
 For Example :-
 ```dart
 void main() {
-  List<String> name = ['Ram', 'Laxman', 'Bharat', 'Shatrughna'];
+  List<String> name = [
+    'Ram',
+    'Laxman',
+    'Bharat',
+    'Shatrughna',
+  ];
   name.forEach((element){
     print(element);
   },
@@ -768,24 +779,24 @@ void main() {
 
 For Example :-
 ```dart
-import 'dart:convert';
-
 //This generic function prints and returns the item at the first index (0) of a list
-T printFirst<T>(List<T> lst) {  //List of generic type taken as function argument
+T printFirst<T>(List<T> lst) {
+  //List of generic type taken as function argument
   T first = lst[0]; //Generic type as local variable
   print(first);
   return first; //Generic type as return value
 }
+
 void main() {
-    //Lists of three different data types declared
-    List<int> intList = [2, 4, 9, 10];
-    List<double> doubleList = [5.2, 9.1, 1.2, 3.5]; 
-    List<String> stringList = ["cat", "giraffe", "panther", "scorpion"];
-    
-    //Generic function printFirst called on Lists if different times
-    printFirst(intList);
-    printFirst(doubleList);
-    printFirst(stringList);
+  //Lists of three different data types declared
+  List<int> intList = [2, 4, 9, 10];
+  List<double> doubleList = [5.2, 9.1, 1.2, 3.5];
+  List<String> stringList = ["cat", "giraffe", "panther", "scorpion"];
+
+  //Generic function printFirst called on Lists if different times
+  printFirst(intList);
+  printFirst(doubleList);
+  printFirst(stringList);
 }
 ```
     Output is : 2
@@ -798,38 +809,36 @@ For Example :-
 - Elements addition of two different length of list with the help of generics
 
 ```dart
-void main(){
+void main() {
   List<int> list1 = [1, 2, 3, 4];
   List<int> list2 = [5, 6, 7, 8, 9, 10, 11, 12];
-  
+
   List<int> finalList = [];
-  
+
   int lengthOfList1 = list1.length;
   int lengthOfList2 = list2.length;
-  
+
   int loopCount = lengthOfList1 < lengthOfList2 ? lengthOfList1 : lengthOfList2;
-  
-  
-  for(int i = 0; i<loopCount; i++){
+
+  for (int i = 0; i < loopCount; i++) {
     int sum = list1[i] + list2[i];
     finalList.add(sum);
   }
-  
+
   // same array issue resolved
   print(finalList);
-  
+
   // finding list with max length
   List<int> maxLengthList = lengthOfList1 > lengthOfList2 ? list1 : list2;
-  
+
   // finding last remaining elements of the maxLengthList
   List<int> lastRemainingElementList = maxLengthList.sublist(loopCount);
-  
+
   print('last remaing elements is: $lastRemainingElementList');
-  
+
   // joining lastRemainingElementList to maxLengthList
   finalList.addAll(lastRemainingElementList);
-  
-  
+
   print('final list with addition is : $finalList');
 }
 ```
@@ -843,23 +852,23 @@ For Example :-
 - Addition of two lists
 
 ```dart
-void main(){
-  var obj = add<List, List, List>([1,2,3], [4,5]);
-  
+void main() {
+  var obj = add<List, List, List>([1, 2, 3], [4, 5]);
+
   print(obj);
 }
 
-L add<D1, D2, L>(D1 value1, D2 value2){
-  if(D1 == int && D2 == int){
+L add<D1, D2, L>(D1 value1, D2 value2) {
+  if (D1 == int && D2 == int) {
     return ((value1 as int) + (value2 as int)) as L;
-  }else if(value1 is List && value2 is List){
+  } else if (value1 is List && value2 is List) {
     value1.addAll(value2);
     return value1 as L;
   }
   return 0 as L;
 }
 ```
-Output is : [1, 2, 3, 4, 5]
+    Output is : [1, 2, 3, 4, 5]
 
   
 
@@ -875,19 +884,17 @@ Output is : [1, 2, 3, 4, 5]
 ```dart
 if(test condition)
   {
-  // Statement Block if condition is true
-  }
-  
+    // Statement Block if condition is true
+    }
 ```
 For example:-
 
 ```dart
 void main() {
   int a = 25;
-  if(a > 15)
-    {
+  if (a > 15) {
     print("25 is greater than 15");
-    }
+  }
 }
 ```
     Output is: 25 is greater than 15
@@ -902,27 +909,24 @@ void main() {
 ```dart
 if(test condition)
   {
-   // Statement Block if condition is true
-  } 
+      // Statement Block if condition is true
+    } 
  else 
   { 
-   // Statement Block if condition is false
-  }
+      // Statement Block if condition is false
+    }
 ```  
 For Example :-
 
 ```dart
 void main() {
- int x = 30 ;
- int y = 45 ;
-  if(x>y)
-    {
-      print("x is greater than y");
-     }
-  else
-      {
-        print("y is greater than x");
-        }
+  int x = 30;
+  int y = 45;
+  if (x > y) {
+    print("x is greater than y");
+  } else {
+    print("y is greater than x");
+  }
 }
 ```
     Output is: y is greater than x
@@ -959,28 +963,20 @@ else if(test condition2)
                         {
 	                        // Execute the code here
                             }
-
 ```
 
 For Example :-
 
 ```dart
-void main()
-{
-    var a = -10;
-    if(a > 0)
-      {
-        print("a is positive number ");
-       }
-    else if(a==0)
-      {
-        print("a is equal to zero ");
-        }
-      else 
-        {
-          print("a is negative number");
-          }
-
+void main() {
+  var a = -10;
+  if (a > 0) {
+    print("a is positive number ");
+  } else if (a == 0) {
+    print("a is equal to zero ");
+  } else {
+    print("a is negative number");
+  }
 }
 ```
     Output is: a is negative number
@@ -1024,33 +1020,29 @@ void main()
 For Example :-
 
 ```dart
-  void main()
-{
+void main() {
   String grade = 'D';
-  
-  switch(grade){
-      
+
+  switch (grade) {
     case 'A':
       print("Excellent grade of A");
       break;
-      
+
     case 'B':
       print("Very good");
-      break; 
-      
+      break;
+
     case 'C':
       print("Good enough. But work hard");
       break;
-      
+
     case 'F':
       print("Sorry You have Failed");
       break;
-      
-    default :
+
+    default:
       print("You Have Entered Invalid Grade");
-      
   }
-  
 }
 ```
     Output is: You Have Entered Invalid Grade
@@ -1068,37 +1060,39 @@ For Example :-
   - `Syntax` for while loop is given below
 
 ```dart 
-      while(condition)
-    {
+while(condition) {
         Statement block
-    }
+      }     
 ```
 For Example :-
 
 ```dart  
-      void main() {
-        int i = 1;
-        while (i<=5) 
-        {
-          print(i);
-          i++;
-        }
-    }
+void main() {
+  int i = 1;
+  while (i <= 5) {
+    print(i);
+    i++;
+  }
+}     
 ```
 
-        Output is : 1
-                    2
-                    3
-                    4
-                    5
+    Output is : 1
+                2
+                3
+                4
+                5
 
 Another Example :-
 
 ```dart
 void main() {
-  List<String> student = ['Rohan', 'Ajay','Rahul'];
-  int i=0;
-  while(i < student.length) {
+  List<String> student = [
+    'Rohan',
+    'Ajay',
+    'Rahul',
+  ];
+  int i = 0;
+  while (i < student.length) {
     print(student[i]);
     i++;
   }
@@ -1129,34 +1123,32 @@ void main() {
 For Example :-
 
 ```dart
-  void main(){
-    for (int i = 1; i <= 10; i++)
-    {
-      print(i);
-    }
+void main() {
+  for (int i = 1; i <= 10; i++) {
+    print(i);
+  }
 }
 ```
-      Output is:  1
-                  2
-                  3
-                  4
-                  5
-                  6
-                  7
-                  8
-                  9
-                  10
+    Output is:  1
+                2
+                3
+                4
+                5
+                6
+                7
+                8
+                9
+                10
 
 Another Example :-
  
 ```dart
 void main() {
-  List<String> student = ['Rohan', 'Ajay','Rahul'];
-  for(int i=0;i<student.length;i++){
+  List<String> student = ['Rohan', 'Ajay', 'Rahul'];
+  for (int i = 0; i < student.length; i++) {
     print(student[i]);
   }
 }
-
 ```
     Output is : Rohan
                 Ajay
@@ -1166,10 +1158,13 @@ void main() {
 
 ```dart
 void main() {
-  List<String> student = ['Rohan', 'Ajay','Rahul'];
- 
+  List<String> student = [
+    'Rohan',
+    'Ajay',
+    'Rahul',
+  ];
+
  student.forEach((value) => print(value) );
-  
 }
 ```
     Output is : Rohan
@@ -1179,8 +1174,12 @@ void main() {
 
 ```dart
 void main() {
-  List<String> student = ['Rohan', 'Ajay','Rahul'];
- 
+  List<String> student = [
+    'Rohan',
+    'Ajay',
+    'Rahul',
+  ];
+
  student.asMap().forEach((i,value) => print('$i = $value') );
 }
 ```
@@ -1206,24 +1205,21 @@ void main(){
   - `The syntax of do while is given below`
 
 ``` dart
-   do 
-      {
-        // statement block 
+do  
+  {
+    // statement block 
       }
-  while (condition);
+while (condition);
 ```
 For Example :-
 
 ```dart
-
-  void main() {
-    var i = 1;
-    do 
-    {
-      print(i);
-      i++;
-    } 
-    while (i<=5);
+void main() {
+  var i = 1;
+  do {
+    print(i);
+    i++;
+  } while (i <= 5);
 }
 ```
     Output is: 1
@@ -1251,15 +1247,15 @@ For Example :-
 ## `Defining a function`
 
 ```dart
-returnType function_name(datatype parameter){
+returnType function_name (datatype parameter) {
   statement block;
 }
 
 Or
 
-returnType function_name(){
+returnType function_name() {
   statement block;
-}
+ }
 ```
 ## `calling a function`
 
@@ -1276,9 +1272,10 @@ For Example :-
 myfun() {
   print("Hello Dart");
 }
- void main(){
-   myfun();
- }
+
+void main() {
+  myfun();
+}
 ```
     Output is : hello Dart
 
@@ -1287,12 +1284,13 @@ myfun() {
 For Example :-
 
 ```dart
-int add_Number(){
+int add_Number() {
   int a = 10;
   int b = 20;
-  return a+b;
+  return a + b;
 }
-void main(){
+
+void main() {
   int total = add_Number();
   print(total);
 }
@@ -1310,15 +1308,13 @@ void main(){
 
 ```dart
 void main() {
-  areaOfRectangle(20,10);
+  areaOfRectangle(20, 10);
 }
 
- void areaOfRectangle(int length,int height) {
-   
-   int area = (length * height);
-   print('area of rectangle is $area');
-    
- }
+void areaOfRectangle(int length, int height) {
+  int area = (length * height);
+  print('area of rectangle is $area');
+}
 ```
     Output is : area of rectangle is 200
 
@@ -1326,17 +1322,16 @@ void main() {
 
 For Example :-
 
- ```dart
+```dart
 void main() {
-  int area = areaOfRectangle(20,15);
+  int area = areaOfRectangle(20, 15);
   print('area of the rectangle is $area');
 }
 
- int areaOfRectangle(int length,int height) {
-   
-   int area = (length * height);
-   return area;  
- }
+int areaOfRectangle(int length, int height) {
+  int area = (length * height);
+  return area;
+}
 ```
     Output is :- area of rectangle is 200
 
@@ -1345,12 +1340,13 @@ void main() {
 For Example :-
 
 ```dart
- void main() {
-  areaOfRectangle(18,10);
+void main() {
+  areaOfRectangle(18, 10);
 }
 
- void areaOfRectangle(int length,int height) => print('area of rectangle is ${(length * height)}');
-
+void areaOfRectangle(int length, int height) => print(
+      'area of rectangle is ${(length * height)}',
+    );
 ```
     Output is :- area of rectangle is 180
 
@@ -1362,14 +1358,13 @@ For Example :-
 
 ```dart
 void main() {
-  int area = areaOfRectangle(20,25);
+  int area = areaOfRectangle(20, 25);
   print('area of the rectangle is $area');
 }
 
- int areaOfRectangle(int length,int height)  => length* height;
-
+int areaOfRectangle(int length, int height) => length * height;
 ```   
-Output is :- area of rectangle is 500
+    Output is :- area of rectangle is 500
 
 
 # `Parameter In Function`
@@ -1385,11 +1380,14 @@ For Example :-
 
 ```dart
 void main() {
-  
-  cityName("jamnagar","rajkot","surat");
+  cityName(
+    "jamnagar",
+    "rajkot",
+    "surat",
+  );
 }
 
-void cityName(String n1,String n2,String n3) {
+void cityName(String n1, String n2, String n3) {
   print('Name of city is $n1');
   print('Name of city is $n2');
   print('Name of city is $n3');
@@ -1412,11 +1410,10 @@ For Example :-
 
 ```dart
 void main() {
-  
-  cityName("jamnagar","rajkot");
+  cityName("jamnagar", "rajkot");
 }
 
-void cityName(String n1,String n2,[String ?n3]) {
+void cityName(String n1, String n2, [String? n3]) {
   print('Name of city is $n1');
   print('Name of city is $n2');
   print('Name of city is $n3');
@@ -1438,36 +1435,40 @@ For Example :-
 
 ```dart
 void main() {
-  
-  volumeOfRectangle(10,width: 15,height: 20);
+  volumeOfRectangle(
+    10,
+    width: 15,
+    height: 20,
+  );
 }
 
 void volumeOfRectangle(
-  int length,
-  {required int height,
-   required int width
-   }
-)
-
-{
-  print("volume of rectangle is ${length * height * width}");
+  int length, {
+  required int height,
+  required int width,
+}) {
+  print(
+    "volume of rectangle is ${length * height * width}",
+  );
 }
 ```
-`OR`
-```dart
-void volumeOfRectangle(
-  int length,
-  {required int height,
-   required int width
-   }
-) {
-  print("volume of rectangle is ${length * height * width}");
-}
-  
-void main() {
-  
-  volumeOfRectangle(10,width: 15,height: 20);
+    Output is : volume of rectangle is 3000
 
+`OR`
+
+```dart
+void volumeOfRectangle(int length, {required int height, required int width}) {
+  print(
+    "volume of rectangle is ${length * height * width}",
+  );
+}
+
+void main() {
+  volumeOfRectangle(
+    10,
+    width: 15,
+    height: 20,
+  );
 }
 ```
     Output is : volume of rectangle is 3000
@@ -1477,22 +1478,13 @@ void main() {
 
 ```dart
 void main() {
-  
-  volumeOfRectangle(10,width: 15,height: 20);
+  volumeOfRectangle(10, width: 15, height: 20);
 }
 
-void volumeOfRectangle(
-  int length,
-  {
-    int? height,
-    int? width
+void volumeOfRectangle(int length, {int? height, int? width}) {
+  if (height != null && width != null) {
+    print("volume of rectangle is ${length * height * width}");
   }
-) {
-  if(height != null && width != null){
-  print("volume of rectangle is ${length * height * width}");
-
-  }
-
 }
 ```
     Output is :  volume of rectangle is 3000
@@ -1505,21 +1497,17 @@ For Example :-
 
 ```dart
 void main() {
-  
-  volumeOfRectangle(10,20);
+  volumeOfRectangle(
+    10,
+    20,
+  );
 }
 
-void volumeOfRectangle(
-  int length,
-  int width,
-  {int height = 30
-   }
-)
-
-{
+void volumeOfRectangle(int length, int width, {int height = 30}) {
   print("volume of rectangle is ${length * height * width}");
 }
 ```
+    Output is : volume of rectangle is 6000
 
 ### `- Other if we don't want to give default value then give the value in the function. `
 
@@ -1527,22 +1515,18 @@ For Example :-
 
 ```dart
 void main() {
-  
-  volumeOfRectangle(10,15,height : 20);
+  volumeOfRectangle(
+    10,
+    15,
+    height: 20,
+  );
 }
 
-void volumeOfRectangle(
-  int length,
-  int width,
-  {
-    int height = 30
-    }
-)
-
-{
-  print("volume of rectangle is ${length * height * width}");
+void volumeOfRectangle(int length, int width, {int height = 30}) {
+  print(
+    "volume of rectangle is ${length * height * width}",
+  );
 }
-
 ```
     Output is : volume of rectangle is 3000
 
@@ -1553,20 +1537,19 @@ void volumeOfRectangle(
 - `Syntax of anonymous function for Multiple Statements`
 
 ```dart
-  () {
+() {
     // Multiple Statements
-  }
+ }
 ```
 For Example :-
 
 ```dart
 void main() {
-  List<String> student = ['Rohan', 'Ajay','Rahul'];
+  List<String> student = ['Rohan', 'Ajay','Rahul',];
  
  student.forEach((value) {
    print(value);
    } );
-  
 }
 ```
     Output is : Rohan
@@ -1585,12 +1568,14 @@ For Example :-
 
 ```dart
 void main() {
-  List<String> student = ['Rohan', 'Ajay','Rahul'];
- 
- student.forEach((value) => print(value));
-    
-}
+  List<String> student = [
+    'Rohan',
+    'Ajay',
+    'Rahul',
+  ];
 
+ student.forEach((value) => print(value));
+}
 ```
     Output is : Rohan
                 Ajay
@@ -1608,11 +1593,11 @@ void main() {
 - The syntax for the same is given below 
 
 ```dart
-  class class_name {  
+class class_name {  
       < properties >  
       < onstructors > 
       < method or functions > 
-      }
+    }
 ```
 - Function inside the class is called method.
 
@@ -1622,26 +1607,23 @@ For Example :-
 void main() {
   // creating the object
   var samsung = Mobile();
-  
+
   // calling Instance method using object
   samsung.showModel('Samsung M 51');
-  
+
   // creating an another object
   var apple = Mobile();
-  
+
   // calling Instace method using another method
-  
+
   apple.showModel('Apple 13 Pro Max');
 }
 
 class Mobile {
   // Instance Variable
-  
-  String ?model;
-  
+  String? model;
   // Instance method
-  
-  showModel(md){
+  showModel(md) {
     model = md;
     print('Model is $model');
   }
@@ -1695,23 +1677,20 @@ For Example :-
 
 ```dart
 void main() {
-  Student student1 = Student(name : "jay" , id : 1);
-  Student student2 = Student(name : "akash" , id : 2);
-  
- 
-  print('Name of student is ${student1.name} and id is ${student1.id.toString()}');
-  
-  print('Name of student is ${student2.name} and id is ${student2.id.toString()}');
-  
+  Student student1 = Student(name: "jay", id: 1);
+  Student student2 = Student(name: "akash", id: 2);
+
+  print(
+      'Name of student is ${student1.name} and id is ${student1.id.toString()}');
+
+  print(
+      'Name of student is ${student2.name} and id is ${student2.id.toString()}');
 }
 
-class Student{
+class Student {
   String name;
   int id;
-  Student({
-    required this.name,
-    required this.id
-  });
+  Student({required this.name, required this.id});
 }
 ```
 
@@ -1722,21 +1701,19 @@ class Student{
 For Example :-
 
 ```dart
-
 void main() {
-  
-   var student1= Student("Vijay",20);
-   var student2 = Student("Ram",21);
-  
-   print("Student name is ${student1.name} and id is ${student1.id}");
-   print("Student name is ${student2.name} and id is ${student2.id}");
+  var student1 = Student("Vijay", 20);
+  var student2 = Student("Ram", 21);
+
+  print("Student name is ${student1.name} and id is ${student1.id}");
+  print("Student name is ${student2.name} and id is ${student2.id}");
 }
 
-class Student{
- String ?name;
- int ?id;
-  
-  Student(this.name,this.id);
+class Student {
+  String? name;
+  int? id;
+
+  Student(this.name, this.id);
 }
 ```
 
@@ -1748,40 +1725,35 @@ class Student{
 For Example :-
 
 ```dart
-vvoid main() {
+void main() {
   // creating the object
-  var samsung = Mobile("M 51","black",25000);
-  
-  
+  var samsung = Mobile("M 51", "black", 25000);
+
   // calling Instance method using object
   samsung.showModel();
-  
-  
+
   // creating an another object
-  var apple = Mobile('13 Pro','White',80000); 
-  
+  var apple = Mobile('13 Pro', 'White', 80000);
+
   // calling Instace method using another method
   apple.showModel();
 }
 
 class Mobile {
-  
   // Instance Variable
   String model;
   String color;
   int price;
-  
+
   // constructor
-  Mobile(this.model,this.color,this.price);
-  
+  Mobile(this.model, this.color, this.price);
+
   // Instance method
-  
-  showModel(){
-  
+
+  showModel() {
     print('Model is $model color is $color and price is $price');
   }
 }
-
 ```
     Output is : Model is M 51 color is black and price is 25000
                 Model is 13 Pro color is White and price is 80000         
@@ -1796,28 +1768,29 @@ For Example :-
 
 ```dart
 void main() {
-   
   var obj = Son();
   obj.getValue(20000);
   obj.disp();
-  
 }
 
-class Parent{
-  double ?money;
-  
-  getValue(m){
+class Parent {
+  double? money;
+
+  getValue(m) {
     money = m;
-  }  
+  }
 }
-class Son extends Parent{
+
+class Son extends Parent {
   String car = "i 10";
-  disp(){
+  disp() {
     print(car);
     print(money);
   }
 }
 ```
+    Output is: i 10
+               20000
 
 Another Example :-
 
@@ -1879,7 +1852,6 @@ class Cat extends Animal {
     print('Meow  !');
   }
 }
-
 ```
     Output is : Dog name is raja.
                 Breed is Lebra.
@@ -1907,29 +1879,26 @@ For Example :-
 
 ```dart
 void main() {
-  
   var obj = Son();
   obj.disp();
 }
+
 // Super class
- class Father{
-   disp(){
+class Father {
+  disp() {
+    print('I am Super Class');
+  }
+}
 
-     print('I am Super Class');
-
-   }
- }  
-   // Sub class
- class Son extends Father{
-
-   @override
-   disp(){
-
-     print('I am Sub Class');
-
-   }
+// Sub class
+class Son extends Father {
+  @override
+  disp() {
+    print('I am Sub Class');
+  }
+}
 ```
-    Output is :    I am Sub Class
+    Output is : I am Sub Class
 
 # `Super Keyword in class`
 
@@ -2077,11 +2046,13 @@ void main() {
                y = 10
 
 Note :-
+
 ```dart
 - The compiler will throw an error if we try to reassign the values in the above code.
 ```
 
 Example with error:-
+
 ```dart
 void main(){
    // declaring variable
@@ -2167,9 +2138,9 @@ void main() {
                Honda
 
 
-Another Example:-
+Another Examples:-
 
-## `With static keyword`
+1) `With static keyword`
 
 ```dart
 class MyColors {
@@ -2189,7 +2160,7 @@ void main() {
 
     Output is: Color is yellow
 
-## `Without Static keyword`
+2) `Without Static keyword`
 
 ```dart
 class MyColors {
@@ -2278,6 +2249,7 @@ void main() {
 - If  class have the abstract method then that class must be abstract class.
 
 - In general when we define the method then we write 
+
 ```dart
 method_name() {
   //Statement
@@ -2305,13 +2277,13 @@ method_name() {
 ## `try Catch`
 
 ```dart
-void main () {
-try {
+void main() {
+  try {
     int result = 12 ~/ 0;
-     print(result);
-  } catch (e){
+    print(result);
+  } catch (e) {
     print(e);
-  } 
+  }
 }
 ```
     Output is :  can not be devided by zero
@@ -2323,25 +2295,22 @@ try {
 ```dart
 
 finally {
-   
    // Statement blocks
-
-}
+  }
 ```
 For Example :-
 
 ```dart
-void main () {
-  
-try {
+void main() {
+  try {
     int result = 12 ~/ 0;
-     print(result);
-  } catch (e){
+    print(result);
+  } catch (e) {
     print(e);
-  } 
-  finally {
+  } finally {
     print("Thank you for your support");
   }
+}
 ```
     Output is : Unsupported operation: Result of truncating division is Infinity: 12 ~/ 0
                 Thank you for your support
@@ -2370,7 +2339,6 @@ void main() {
   //       print("Hello not Prime number");
   //     }
     }
-
 }
 ```
     Output is: 
