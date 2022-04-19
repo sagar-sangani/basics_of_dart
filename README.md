@@ -704,9 +704,11 @@ void main() {
 - The forEach() method requires a key and a value. It applies `f` to each key-value pair of the map.
 
 ## `Syntax`
+
 ```dart
 Map.forEach(void f(K key, V value));
 ```
+
 For Example :-
 
 ```dart
@@ -723,11 +725,76 @@ void main() {
     Output is: Usrname : tom
                Password : pass@123
 
+Another Example :-
+
+```dart
+class Car {
+  String name;
+  bool isElectric;
+  Car({
+    required this.name,
+    required this.isElectric,
+  });
+}
+
+void main() {
+  var car1 = Car(name: "Ford", isElectric: false,);
+  var car2 = Car(name: "Toyota", isElectric: false);
+  var car3 = Car(name: "Honda", isElectric: false);
+  var car4 = Car(name: "Tezla", isElectric: true);
+  var list = [car1, car2, car3, car4];
+
+  var lists = list.map((car) {
+    if (car.name == "Tezla") {
+      print('upating ${car.name} ...');
+      car.name = "Tesla";
+    }
+    return car;
+  });
+
+//loop over mapped object collection
+
+  lists.forEach(
+    (car) => print("${car.name} is electric? ${car.isElectric}"),
+  );
+}
+```
+    Output is : Ford is electric? false
+                Toyota is electric? false
+                Honda is electric? false
+                upating Tezla ...
+                Tesla is electric? true
+
 # `.map() function`
 
 ## `1) .map() for List`
 
+For Example:-
+```dart
+void main() {
+  //Double all numbers in the list and print it
+  List<int> numbers = [2, 45, 76, 248, 456, 9853];
+  var newNumbers = numbers.map((num) {
+    return num * 2;
+  });
+  print(newNumbers);
+
+  //print the length of each name
+  List<String> names = [
+    'Ram',
+    'Laxman',
+    'Bharat',
+    'Shatrughna',
+  ];
+  var lengthOfNames = names.map((name) => name.length);
+  print(lengthOfNames);
+}
+```
+    Output is: (4, 90, 152, 496, 912, 19706)
+               (3, 6, 6, 10)
+
 ## `2) .map() for Map`
+
 # `Spread operator ( ... )`
 
 - It can be used to extend the elements of a Collection. 
@@ -2315,6 +2382,98 @@ void main() {
     Output is : Unsupported operation: Result of truncating division is Infinity: 12 ~/ 0
                 Thank you for your support
                 
+
+# `Enum`
+
+- A dart enum is basically a list of named constant values.
+
+- In dart program enum keyword is used to define enumeration type in dart.
+
+- In dart `enum` is been used to define a `collection of constant.`
+
+- A `enum keyword` is used to initialize enumerated data type.
+
+- `enum_name`: is a `user given name` for enum class, is used for naming convension of enumerated class.
+
+- `constant (data member)`: constant value of enum class 
+
+## Note :-
+
+- constant value should be seperated by “`,`” commas.
+
+- enum class last data member will not have a comma.
+
+- The enumerated class `does not hold all types of data`, rather `it stores only string values without the quotes over them.`
+
+## When to use enums
+
+- As we known enum are list of constants value & is used when we know all the const value at development time.
+
+- Where to use enum -> common example suppose we want to show week days name “MONDAY – SUNDAY” in a dropdown menu at that time we know week days data is constant and will never change.
+## Syntax for enum
+
+```dart
+enum enum_name{
+   constant value 1,   // data member 1
+   constant value 2,
+   constant value 3
+}
+```
+
+```dart
+enum WeekDay { monday, tuesday, wednesday, thursday, friday, saturday, sunday }
+void main() {
+  for (WeekDay name in WeekDay.values) {
+    print(name);
+  }
+}
+```
+    Output is : WeekDay.monday
+                WeekDay.tuesday
+                WeekDay.wednesday
+                WeekDay.thursday
+                WeekDay.friday
+                WeekDay.saturday
+                WeekDay.sunday
+
+Another Example :-
+
+```dart
+enum WeekDay { monday, tuesday, wednesday, thursday, friday, saturday, sunday }
+
+void main() {
+  // Assign a value from
+  // enum to a variable geek
+  // assume you app user will select from Menu Item Fruits
+  var selectedEnumWeekDay = WeekDay.sunday;
+
+  // Switch-case
+  switch (selectedEnumWeekDay) {
+    case WeekDay.monday:
+      print("You selected monday");
+      break;
+    case WeekDay.tuesday:
+      print("You selected tuesday");
+      break;
+    case WeekDay.wednesday:
+      print("You selected wednesday");
+      break;
+    case WeekDay.thursday:
+      print("You selected thursday");
+      break;
+    case WeekDay.friday:
+      print("You selected friday");
+      break;
+    case WeekDay.saturday:
+      print("You selected saturday");
+      break;
+    case WeekDay.sunday:
+      print("You selected sunday");
+      break;
+  }
+}
+```
+    Output is : You selected sunday
 # `Practice`
 
 ## `finding prime number from 1 to 100`
