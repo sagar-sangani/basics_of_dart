@@ -423,9 +423,9 @@ void main() {
 
   - Logical operators are `used to combine two or more conditions`.Logical operators `return a Boolean value of true or false.`
 
-- ## `a) AND operator ( && )`
+## `5_a) AND operator ( && )`
 
-  - `Returns true if all conditions are true.`
+- `Returns true if all conditions are true.`
 
 For Example :-
 
@@ -441,7 +441,7 @@ void main() {
     Output is: true
 
 
-  - ## `b) OR operator ( || )`
+## `5_b) OR operator ( || )`
 
     - `Returns true if any one condition is true.`
 
@@ -455,9 +455,9 @@ void main() {
 ```
     Output is: false
       
-  - ## `c) NOT operator  (!)`
+## `5_c) NOT operator  (!)`
 
-    - Returns the `inverse` of the result.
+- Returns the `inverse` of the result.
 
 ```dart
 void main() {
@@ -474,9 +474,28 @@ void main() {
     Output is: result is true
                result1 is true
 
-  - ## `d) `(`??`)` if null or coalescing operator (??)`
+## `5_d) `(`?`)`operator`
 
-    - Is returns the expression on its left unless that expression’s value is null, in which case it evaluates and returns the expression on its right.
+- The ? operator is used when we want to make sure that we `don't invoke a function of a null value.` 
+
+- It will call a function if and only if the `object is not null.`
+
+For Example :-
+
+```dart
+void main() {
+  var earthMoon;
+  var length = earthMoon?.length;
+  print(length);
+}
+```
+    Output is: null
+
+- In the above code, we know that the variable earthMoon has null as its value, so when we try to invoke the length function on it using the ? operator nothing changed, and the length variable is also a null value.
+
+## `5_e) `(`??`)` if null or coalescing operator (??)`
+
+- Is returns the expression on its left unless that expression’s value is null, in which case it evaluates and returns the expression on its right.
 
 ## Syntax
 ```dart
@@ -500,9 +519,23 @@ void main() {
 ```
     Output is : 15
 
-  - ## `e) `(`??=`)`  null aware assignment`
+```dart
+void main() {
+  var age;
+  age = age ?? 23;
+  print(age);
 
-    - It assigns a value to a variable only if that `variable is currently null`.
+  var name = "mukul";
+  name = name ?? "suruchi";
+  print(name);
+}
+```
+Output is : 23
+            mukul
+
+## `5_f) `(`??=`)`  null aware assignment`
+
+- It assigns a value to a variable only if that `variable is currently null`.
 
 For Example :-
 ```dart
@@ -530,13 +563,13 @@ void main() {
     Output is : 3
                 3
 
-  - ## `f) `(`x?.p`)` null-aware access` 
+## `5_g) `(`x?.p`)` null aware access` 
 
-    - null-aware access. `x?.p` evaluates to `x.p` if `x` is not `null`, otherwise evaluates to `null`.
+- null aware access. `x?.p` evaluates to `x.p` if `x` is not `null`, otherwise evaluates to `null`.
 
-  - ## `g) `(`x?.m()`)` null-aware method invocation`
+## `5_h) `(`x?.m()`)` null aware method invocation`
 
-    - null-aware method invocation. `x?.m()` invokes `m` only if `x` is not `null`.
+- null aware method invocation. `x?.m()` invokes `m` only if `x` is not `null`.
 # `C) ternary or conditional operator` 
 
 - It operate on `three operand.`
