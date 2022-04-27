@@ -1,5 +1,10 @@
 # Basics of Dart Language
 
+# `What is null variable?`
+
+- Variable which has `no values` assign ever and the variable is `initialized with nothing` like is called null  variable.
+
+
 # `Variable and Rules`
 
 - variable is an identifier or a name which is used to refer a value and this value change during the program execution.
@@ -201,7 +206,7 @@ void main() {
                 y=14
 
 
-##`2) Postfix increment/decrement operator`
+## `2) Postfix increment/decrement operator`
 
 ```dart
 void main() {
@@ -215,7 +220,7 @@ void main() {
     Output is : x=30 
                 y=15
 
-## B) `Binary operator` 
+# `B) Binary operator` 
 
 - It operate on `two operand`
 
@@ -450,9 +455,9 @@ void main() {
 ```
     Output is: false
       
-  - c) NOT operator  `!`
+  - ## `c) NOT operator  (!)`
 
-    - `Returns the inverse of the result.`
+    - Returns the `inverse` of the result.
 
 ```dart
 void main() {
@@ -469,10 +474,72 @@ void main() {
     Output is: result is true
                result1 is true
 
+  - ## `d) `(`??`)` if null or coalescing operator (??)`
 
-## `C) ternary or conditional operator` 
+    - Is returns the expression on its left unless that expression’s value is null, in which case it evaluates and returns the expression on its right.
 
-- `It operate on three operand.`
+## Syntax
+```dart
+(expression 1) ?? (expression 2)
+```
+- Both expressions are not null then it evaluates the value of the left expression.
+
+- if value of left expression is null then evaluate the right expression.
+
+For Example :-
+
+```dart
+void main() {
+  int a = 15;
+  int? b;
+  var c;
+
+  c = b ?? a; // check that b is null or not if b is null then right side operand asign to the c
+  print(c);
+}
+```
+    Output is : 15
+
+  - ## `e) `(`??=`)`  null aware assignment`
+
+    - It assigns a value to a variable only if that `variable is currently null`.
+
+For Example :-
+```dart
+void main() {
+  int? age;
+  int myAge = 24;
+  age ??= myAge;
+  print(age);
+}
+```
+    Output is : 24
+
+Another Example:-
+
+```dart
+void main() {
+  int? a; // The initial value of a is null.
+  a ??= 3;
+  print(a); // <-- Prints 3.
+
+  a ??= 5;
+  print(a);
+}
+```
+    Output is : 3
+                3
+
+  - ## `f) `(`x?.p`)` null-aware access` 
+
+    - null-aware access. `x?.p` evaluates to `x.p` if `x` is not `null`, otherwise evaluates to `null`.
+
+  - ## `g) `(`x?.m()`)` null-aware method invocation`
+
+    - null-aware method invocation. `x?.m()` invokes `m` only if `x` is not `null`.
+# `C) ternary or conditional operator` 
+
+- It operate on `three operand.`
 
 - `result = testCondition ? expression1 : expression2 ;`
 
@@ -497,6 +564,364 @@ void main() {
 }
 ```    
     Output is : Guest User
+
+
+# `Control Structure`
+
+## `1) if condition`
+
+- If Statement executes the statement block if and only if the particular test condition is true. If the test condition is False then the statement block is skipped.
+
+  - `Syntax for if statement is given below`
+
+```dart
+if(test condition)
+  {
+    // Statement Block if condition is true
+    }
+```
+For example:-
+
+```dart
+void main() {
+  int a = 25;
+  if (a > 15) {
+    print("25 is greater than 15");
+  }
+}
+```
+    Output is: 25 is greater than 15
+
+## `2) if else condition`
+
+- If Else statement is similar to If Statement only additional part is when the Test Condition is evaluated as False then it executes another statement block unlike If Statement where the statement block will be skipped if the test condition is evaluated as False.
+
+
+  - `Syntax for if statement is given below`
+
+```dart
+if(test condition)
+  {
+      // Statement Block if condition is true
+    } 
+ else 
+  { 
+      // Statement Block if condition is false
+    }
+```  
+For Example :-
+
+```dart
+void main() {
+  int x = 30;
+  int y = 45;
+  if (x > y) {
+    print("x is greater than y");
+  } else {
+    print("y is greater than x");
+  }
+}
+```
+    Output is: y is greater than x
+
+
+## `3) if else if condition`
+  
+  - If else if statement includes alternative test conditions such that if the first test condition is True then it will execute the if statement and skip all the rest test conditions.
+
+  - If it is evaluated as False then it will skip the if condition and move to alternative if else test condition and if it is evaluated as True it will execute that particular statement block.
+
+  - And if the test condition is evaluated as False then it will move to next alternate if else condtion and this cycle goes on. If none of the test condition is true then It will skip all the if else statements and move to else statement and execute that statement block.
+
+  - An If else if condition can have 'n' number of if else statements
+
+    - `Syntax for if else if statement is given below`
+
+```dart
+  if(test condition1) 
+  {
+	  // Execute the code here
+    }
+else if(test condition2)
+       {
+	       // Execute the code here
+          }
+          .
+          .
+          else if(test condition N)
+                 {
+	                // Execute the code here
+                    }
+                    else 
+                        {
+	                        // Execute the code here
+                            }
+```
+
+For Example :-
+
+```dart
+void main() {
+  var a = -10;
+  if (a > 0) {
+    print("a is positive number ");
+  } else if (a == 0) {
+    print("a is equal to zero ");
+  } else {
+    print("a is negative number");
+  }
+}
+```
+    Output is: a is negative number
+
+
+## `4) switch and case` 
+
+- A switch statement is an alternative of else if statements which allows a variable to be tested for equality against a list of values.
+
+- Each value is called a case, and the variable being switched on is checked for each switch case.
+
+- Wherever an expression value matches with a case value, the body of that case will be executed.
+
+- The switch will be terminated using a break statement. Here break statement is compulsory. Otherwise, the dart analysis engine will throw a syntax error.
+
+- Only for the default case break is optional. Otherwise, in all cases break is compulsory.
+
+
+  - `Syntax for switch case is given below`      
+
+```dart
+      switch (expression) {
+      case ONE:
+        {
+          statement();
+        }
+      break;
+      
+      case TWO:
+        {
+          statement();
+        }
+      break;
+      
+      default:
+        {
+          statement();
+        }
+    }
+```
+For Example :-
+
+```dart
+void main() {
+  String grade = 'D';
+
+  switch (grade) {
+    case 'A':
+      print("Excellent grade of A");
+      break;
+
+    case 'B':
+      print("Very good");
+      break;
+
+    case 'C':
+      print("Good enough. But work hard");
+      break;
+
+    case 'F':
+      print("Sorry You have Failed");
+      break;
+
+    default:
+      print("You Have Entered Invalid Grade");
+  }
+}
+```
+    Output is: You Have Entered Invalid Grade
+
+
+
+## `5) while loop`
+  
+  - While Loop is a type of indefinite(Loops in which number of iterations are not constant) Loop which checks the test expression or based on a boolean condition(True or False).
+  
+  - In while loop we `first checked the condition` and then after `execute the code.`
+
+  - That means if the test expression is true it will execute the statement block and it will evaluate again and again as long as the test expression is true. When the test expression is false it will exit from the loop.
+
+  - `Syntax` for while loop is given below
+
+```dart 
+while(condition) {
+        Statement block
+      }     
+```
+For Example :-
+
+```dart  
+void main() {
+  int i = 1;
+  while (i <= 5) {
+    print(i);
+    i++;
+  }
+}     
+```
+
+    Output is : 1
+                2
+                3
+                4
+                5
+
+Another Example :-
+
+```dart
+void main() {
+  List<String> student = [
+    'Rohan',
+    'Ajay',
+    'Rahul',
+  ];
+  int i = 0;
+  while (i < student.length) {
+    print(student[i]);
+    i++;
+  }
+}
+```
+    Output is : Rohan
+                Ajay
+                Rahul
+
+
+
+## `6) for loop` 
+
+- For Loop is a Definite Loop (One where the number of iterations are constant) it checks for conditions specified and used to execute the statements for a specified number of times.
+
+
+
+  -  `The syntax of for loop is given below`
+
+```dart
+
+  for (Initialization; Condition; Increment/Decrement) 
+  {
+    // statement block
+  }
+```
+
+For Example :-
+
+```dart
+void main() {
+  for (int i = 1; i <= 10; i++) {
+    print(i);
+  }
+}
+```
+    Output is:  1
+                2
+                3
+                4
+                5
+                6
+                7
+                8
+                9
+                10
+
+Another Example :-
+ 
+```dart
+void main() {
+  List<String> student = ['Rohan', 'Ajay', 'Rahul'];
+  for (int i = 0; i < student.length; i++) {
+    print(student[i]);
+  }
+}
+```
+    Output is : Rohan
+                Ajay
+                Rahul
+
+- `forEach loop with list and map`
+
+```dart
+void main() {
+  List<String> student = [
+    'Rohan',
+    'Ajay',
+    'Rahul',
+  ];
+
+ student.forEach((value) => print(value) );
+}
+```
+    Output is : Rohan
+                Ajay
+                Rahul
+
+
+```dart
+void main() {
+  List<String> student = [
+    'Rohan',
+    'Ajay',
+    'Rahul',
+  ];
+
+ student.asMap().forEach((i,value) => print('$i = $value') );
+}
+```
+    Output is : 0 = Rohan
+                1 = Ajay
+                2 = Rahul
+
+
+```dart
+void main(){
+  Map<String,String> student = {'name':'Rohan','city':'Rajkot','state':'Gujarat'};
+  student.forEach((key,value) =>print('$key = $value'));
+}
+```
+    Output is : name = Rohan
+                city = Rajkot
+                state = Gujarat
+
+## `7) do while loop`
+
+  - In Do While Loop is similar to While Loop the difference is `Do-While loop executes the statement block once even if the test expression or condition is false` unlike While Loop which does not execute statement block if the test expression is false
+
+  - `The syntax of do while is given below`
+
+``` dart
+do  
+  {
+    // statement block 
+      }
+while (condition);
+```
+For Example :-
+
+```dart
+void main() {
+  var i = 1;
+  do {
+    print(i);
+    i++;
+  } while (i <= 5);
+}
+```
+    Output is: 1
+               2
+               3
+               4
+               5
+
+
     
 # `List data type` 
 
@@ -939,361 +1364,6 @@ L add<D1, D2, L>(D1 value1, D2 value2) {
 
   
 
-
-# `Control Structure`
-
-## `1) if condition`
-
-- If Statement executes the statement block if and only if the particular test condition is true. If the test condition is False then the statement block is skipped.
-
-  - `Syntax for if statement is given below`
-
-```dart
-if(test condition)
-  {
-    // Statement Block if condition is true
-    }
-```
-For example:-
-
-```dart
-void main() {
-  int a = 25;
-  if (a > 15) {
-    print("25 is greater than 15");
-  }
-}
-```
-    Output is: 25 is greater than 15
-
-## `2) if else condition`
-
-- If Else statement is similar to If Statement only additional part is when the Test Condition is evaluated as False then it executes another statement block unlike If Statement where the statement block will be skipped if the test condition is evaluated as False.
-
-
-  - `Syntax for if statement is given below`
-
-```dart
-if(test condition)
-  {
-      // Statement Block if condition is true
-    } 
- else 
-  { 
-      // Statement Block if condition is false
-    }
-```  
-For Example :-
-
-```dart
-void main() {
-  int x = 30;
-  int y = 45;
-  if (x > y) {
-    print("x is greater than y");
-  } else {
-    print("y is greater than x");
-  }
-}
-```
-    Output is: y is greater than x
-
-
-## `3) if else if condition`
-  
-  - If else if statement includes alternative test conditions such that if the first test condition is True then it will execute the if statement and skip all the rest test conditions.
-
-  - If it is evaluated as False then it will skip the if condition and move to alternative if else test condition and if it is evaluated as True it will execute that particular statement block.
-
-  - And if the test condition is evaluated as False then it will move to next alternate if else condtion and this cycle goes on. If none of the test condition is true then It will skip all the if else statements and move to else statement and execute that statement block.
-
-  - An If else if condition can have 'n' number of if else statements
-
-    - `Syntax for if else if statement is given below`
-
-```dart
-  if(test condition1) 
-  {
-	  // Execute the code here
-    }
-else if(test condition2)
-       {
-	       // Execute the code here
-          }
-          .
-          .
-          else if(test condition N)
-                 {
-	                // Execute the code here
-                    }
-                    else 
-                        {
-	                        // Execute the code here
-                            }
-```
-
-For Example :-
-
-```dart
-void main() {
-  var a = -10;
-  if (a > 0) {
-    print("a is positive number ");
-  } else if (a == 0) {
-    print("a is equal to zero ");
-  } else {
-    print("a is negative number");
-  }
-}
-```
-    Output is: a is negative number
-
-
-## `4) switch and case` 
-
-- A switch statement is an alternative of else if statements which allows a variable to be tested for equality against a list of values.
-
-- Each value is called a case, and the variable being switched on is checked for each switch case.
-
-- Wherever an expression value matches with a case value, the body of that case will be executed.
-
-- The switch will be terminated using a break statement. Here break statement is compulsory. Otherwise, the dart analysis engine will throw a syntax error.
-
-- Only for the default case break is optional. Otherwise, in all cases break is compulsory.
-
-
-  - `Syntax for switch case is given below`      
-
-```dart
-      switch (expression) {
-      case ONE:
-        {
-          statement();
-        }
-      break;
-      
-      case TWO:
-        {
-          statement();
-        }
-      break;
-      
-      default:
-        {
-          statement();
-        }
-    }
-```
-For Example :-
-
-```dart
-void main() {
-  String grade = 'D';
-
-  switch (grade) {
-    case 'A':
-      print("Excellent grade of A");
-      break;
-
-    case 'B':
-      print("Very good");
-      break;
-
-    case 'C':
-      print("Good enough. But work hard");
-      break;
-
-    case 'F':
-      print("Sorry You have Failed");
-      break;
-
-    default:
-      print("You Have Entered Invalid Grade");
-  }
-}
-```
-    Output is: You Have Entered Invalid Grade
-
-
-
-## `5) while loop`
-  
-  - While Loop is a type of indefinite(Loops in which number of iterations are not constant) Loop which checks the test expression or based on a boolean condition(True or False).
-  
-  - In while loop we `first checked the condition` and then after `execute the code.`
-
-  - That means if the test expression is true it will execute the statement block and it will evaluate again and again as long as the test expression is true. When the test expression is false it will exit from the loop.
-
-  - `Syntax` for while loop is given below
-
-```dart 
-while(condition) {
-        Statement block
-      }     
-```
-For Example :-
-
-```dart  
-void main() {
-  int i = 1;
-  while (i <= 5) {
-    print(i);
-    i++;
-  }
-}     
-```
-
-    Output is : 1
-                2
-                3
-                4
-                5
-
-Another Example :-
-
-```dart
-void main() {
-  List<String> student = [
-    'Rohan',
-    'Ajay',
-    'Rahul',
-  ];
-  int i = 0;
-  while (i < student.length) {
-    print(student[i]);
-    i++;
-  }
-}
-```
-    Output is : Rohan
-                Ajay
-                Rahul
-
-
-
-## `6) for loop` 
-
-- For Loop is a Definite Loop (One where the number of iterations are constant) it checks for conditions specified and used to execute the statements for a specified number of times.
-
-
-
-  -  `The syntax of for loop is given below`
-
-```dart
-
-  for (Initialization; Condition; Increment/Decrement) 
-  {
-    // statement block
-  }
-```
-
-For Example :-
-
-```dart
-void main() {
-  for (int i = 1; i <= 10; i++) {
-    print(i);
-  }
-}
-```
-    Output is:  1
-                2
-                3
-                4
-                5
-                6
-                7
-                8
-                9
-                10
-
-Another Example :-
- 
-```dart
-void main() {
-  List<String> student = ['Rohan', 'Ajay', 'Rahul'];
-  for (int i = 0; i < student.length; i++) {
-    print(student[i]);
-  }
-}
-```
-    Output is : Rohan
-                Ajay
-                Rahul
-
-- `forEach loop with list and map`
-
-```dart
-void main() {
-  List<String> student = [
-    'Rohan',
-    'Ajay',
-    'Rahul',
-  ];
-
- student.forEach((value) => print(value) );
-}
-```
-    Output is : Rohan
-                Ajay
-                Rahul
-
-
-```dart
-void main() {
-  List<String> student = [
-    'Rohan',
-    'Ajay',
-    'Rahul',
-  ];
-
- student.asMap().forEach((i,value) => print('$i = $value') );
-}
-```
-    Output is : 0 = Rohan
-                1 = Ajay
-                2 = Rahul
-
-
-```dart
-void main(){
-  Map<String,String> student = {'name':'Rohan','city':'Rajkot','state':'Gujarat'};
-  student.forEach((key,value) =>print('$key = $value'));
-}
-```
-    Output is : name = Rohan
-                city = Rajkot
-                state = Gujarat
-
-## `7) do while loop`
-
-  - In Do While Loop is similar to While Loop the difference is `Do-While loop executes the statement block once even if the test expression or condition is false` unlike While Loop which does not execute statement block if the test expression is false
-
-  - `The syntax of do while is given below`
-
-``` dart
-do  
-  {
-    // statement block 
-      }
-while (condition);
-```
-For Example :-
-
-```dart
-void main() {
-  var i = 1;
-  do {
-    print(i);
-    i++;
-  } while (i <= 5);
-}
-```
-    Output is: 1
-               2
-               3
-               4
-               5
 
 
 # `Function`
@@ -2698,3 +2768,6 @@ assert(list[1] == 1,"you have entered wrong condition");
   
 ## `Note` 
  - If any of the above condition becomes false then program execution will be stop there and given the error message
+
+# Exclamation`!` mark
+ - Use it only if you are absolutely sure that the value will never be null 
