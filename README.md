@@ -474,6 +474,10 @@ void main() {
     Output is: result is true
                result1 is true
 
+
+## `5_d) Exclamation (!) mark`
+
+ - Use it only if you are absolutely sure that the value will never be null 
 ## `5_d) `(`?`)`operator`
 
 - The ? operator is used when we want to make sure that we `don't invoke a function of a null value.` 
@@ -1075,10 +1079,24 @@ var identifier = new Map()
 
 //now use the following syntax to initialize the map
 map_name[key] = value
-
 ```
+- Note :- The `keys` are provided `inside the square brackets` and the `values` that we want to assign to those keys are present on the `right side of the expression.`
 
 For Example :-
+
+```dart
+void main() {
+  var colors = Map();
+  colors['blue'] = true;
+  colors['red'] = false;
+  colors['green'] = false;
+  colors['yellow'] = true;
+  print(colors);
+}
+```
+    Output is : {blue: true, red: false, green: false, yellow: true}
+
+Another Example :- 
 
 ```dart
 void main() {
@@ -1090,6 +1108,32 @@ void main() {
 ```
     Output is : {Usrname: admin, Password: admin@123}
 
+Another Example :- 
+
+```dart
+void main() {
+  var colors = Map();
+  colors['blue'] = true;
+  colors['red'] = false;
+  colors['green'] = false;
+  colors['yellow'] = true;
+  print(colors['blue']); // accessing a specific key
+  print(colors.length); // checking the number of key-value pairs present in the map
+  print(colors.isEmpty); // checking if the map is empty or not
+  print(colors.keys); // printing all the keys present in the map
+  print(colors);
+  print(colors.values);
+}
+```
+    Output is : true
+                4
+                false
+                (blue, red, green, yellow)
+                {blue: true, red: false, green: false, yellow: true}
+                (true, false, false, true)
+# What is difference between forEach() and map() function
+- Although both map and forEach looks similar syntactically, the key difference between these two is that the `map function returns the object after iteration.`
+- So, this allows the map function to `update the collection` of items while it is being looped over and `create new updated collection.`
 # `.forEach() function`
 
 ## `1) .forEach() for List`
@@ -1201,6 +1245,8 @@ void main() {
   var car3 = Car(name: "Honda", isElectric: false);
   var car4 = Car(name: "Tezla", isElectric: true);
   var list = [car1, car2, car3, car4];
+
+  //We want to update the car collection so that the car named Tezla is renamed to Tesla.
 
   var lists = list.map((car) {
     if (car.name == "Tezla") {
@@ -2802,5 +2848,24 @@ assert(list[1] == 1,"you have entered wrong condition");
 ## `Note` 
  - If any of the above condition becomes false then program execution will be stop there and given the error message
 
-# Exclamation`!` mark
- - Use it only if you are absolutely sure that the value will never be null 
+
+
+```dart
+ var smoothColor = TWColors.black
+        .withBlue((TWColors.slate.shade700.blue +
+            ((TWColors.slate.shade100.blue - TWColors.slate.shade700.blue) *
+                    reverseShrink)
+                .toInt()))
+        .withGreen((TWColors.slate.shade700.green +
+            ((TWColors.slate.shade100.green - TWColors.slate.shade700.green) *
+                    reverseShrink)
+                .toInt()))
+        .withRed((TWColors.slate.shade700.red +
+            ((TWColors.slate.shade100.red - TWColors.slate.shade700.red) *
+                    reverseShrink)
+                .toInt()));
+```
+
+```dart
+ logic for colour variation while scrolling sv + ((ev-sv)*shrink)
+```
