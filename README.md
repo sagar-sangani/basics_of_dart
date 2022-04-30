@@ -2872,7 +2872,7 @@ assert(list[1] == 1,"you have entered wrong condition");
  - If any of the above condition becomes false then program execution will be stop there and given the error message
 
 
-
+## Colour variation from slate.shade100 to slate.shade700
 ```dart
  var smoothColor = TWColors.black
         .withBlue((TWColors.slate.shade700.blue +
@@ -2888,7 +2888,8 @@ assert(list[1] == 1,"you have entered wrong condition");
                     reverseShrink)
                 .toInt()));
 ```
+## General formula for colour variation while scrolling
 
 ```dart
- logic for colour variation while scrolling sv + ((ev-sv)*shrink)
+sv + ((ev-sv)*shrink)
 ```
