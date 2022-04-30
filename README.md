@@ -884,7 +884,28 @@ void main() {
                 Ajay
                 Rahul
 
-- `forEach loop with list and map`
+## `for-in loop`
+
+For Example :-
+
+```dart
+void main() {
+  var fruits = ['apple', 'banana', 'kiwi', 'mango'];
+  print(fruits);
+  for (var fruit in fruits) {
+    print("The current fruit is = $fruit");
+  }
+}
+```
+    Output is : [apple, banana, kiwi, mango]
+                The current fruit is = apple
+                The current fruit is = banana
+                The current fruit is = kiwi
+                The current fruit is = mango
+
+## `forEach loop with list and map`
+
+For Example :-
 
 ```dart
 void main() {
@@ -901,6 +922,7 @@ void main() {
                 Ajay
                 Rahul
 
+Another Example :-
 
 ```dart
 void main() {
@@ -917,6 +939,7 @@ void main() {
                 1 = Ajay
                 2 = Rahul
 
+Another Example :-
 
 ```dart
 void main(){
