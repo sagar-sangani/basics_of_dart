@@ -2962,3 +2962,45 @@ _A list of my commonly used Git commands_
 | `git log --oneline` | View changes (briefly) |
 | `git diff [source branch] [target branch]` | Preview changes before merging |
 
+
+
+
+# Dart pattern print Excercise
+
+```dart
+void main() {
+  for (int i = 0; i < 5; i++) {
+    String blankSpace = '';
+    int number = 1;
+    for (int j = 0; j <= i; j++) {
+      blankSpace += number.toString();
+      number += 1;
+    }
+    print(blankSpace);
+  }
+}
+```
+    Output : 1
+             12
+             123
+             1234
+             12345
+
+
+```dart
+void main() {
+  for (int i = 0; i < 5; i++) {
+    String blankSpace = '';
+    for (int j = 0; j <= i; j++) {
+      blankSpace += '* ';
+    }
+    print(blankSpace);
+  }
+}
+```
+    Output :  * 
+              * * 
+              * * * 
+              * * * * 
+              * * * * *
+     
