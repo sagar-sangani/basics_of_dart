@@ -2964,6 +2964,25 @@ _A list of my commonly used Git commands_
 
 
 
+```dart
+void main() {
+  double number = 257;
+  int sum = 0;
+
+  for (var i = 0; i < number.toString().length; i++) {
+    double reminder = number % 10;
+    print('${reminder}');
+    number -= reminder;
+    number /= 10;
+    sum += reminder.toInt();
+  }
+  print(sum);
+}
+```
+    Output :
+
+
+
 
 # Dart pattern print Excercise
 
@@ -2973,7 +2992,7 @@ void main() {
     String blankSpace = '';
     int number = 1;
     for (int j = 0; j <= i; j++) {
-      blankSpace += number.toString();
+      blankSpace += '$number ';
       number += 1;
     }
     print(blankSpace);
@@ -2981,10 +3000,10 @@ void main() {
 }
 ```
     Output : 1
-             12
-             123
-             1234
-             12345
+             1 2
+             1 2 3
+             1 2 3 4
+             1 2 3 4 5
 
 
 ```dart
@@ -3003,4 +3022,114 @@ void main() {
               * * * 
               * * * * 
               * * * * *
+
+
+```dart
+void main() {
+  int printCount = 8;
+  for (int i = 0; i < printCount; i++) {
+    String blankSpace = '';
+    int number = 1;
+    int triangleCount = 3;
+
+    for (int k = triangleCount; k > 0; k--) {
+      // Again print double space
+      for (int j = printCount - 1 - i; j > 0; j--) {
+        if (k == triangleCount) {
+          blankSpace += ' ';
+        } else {
+          blankSpace += '  ';
+        }
+      }
+
+      // Again print the number
+      number = 1;
+      for (int j = 0; j <= i; j++) {
+        blankSpace += ' $number';
+        number += 1;
+      }
+      blankSpace += '  ';
+    }
+
+    print(blankSpace);
+  }
+}
+```
+    Output :         1                 1                 1  
+                    1 2               1 2               1 2  
+                   1 2 3             1 2 3             1 2 3  
+                  1 2 3 4           1 2 3 4           1 2 3 4  
+                 1 2 3 4 5         1 2 3 4 5         1 2 3 4 5  
+                1 2 3 4 5 6       1 2 3 4 5 6       1 2 3 4 5 6  
+               1 2 3 4 5 6 7     1 2 3 4 5 6 7     1 2 3 4 5 6 7  
+              1 2 3 4 5 6 7 8   1 2 3 4 5 6 7 8   1 2 3 4 5 6 7 8  
      
+```dart
+void main() {
+  int printCount = 8;
+  int triangleCount = 3;
+
+  for (int i = 0; i < printCount; i++) {
+    String blankSpace = '';
+    int number = 1;
+
+    for (int k = triangleCount; k > 0; k--) {
+      for (int j = printCount - 1 - i; j > 0; j--) {
+        if (k == triangleCount) {
+          blankSpace += ' ';
+        } else {
+          blankSpace += '  ';
+        }
+      }
+
+      number = 1;
+      for (int j = 0; j <= i; j++) {
+        blankSpace += ' $number';
+        number += 1;
+      }
+      blankSpace += '  ';
+    }
+
+    print(blankSpace);
+  }
+
+  for (int i = 0; i < printCount - 1; i++) {
+    String blankSpace = '';
+    int number = 1;
+
+    for (int k = triangleCount; k > 0; k--) {
+      for (int j = i + 1; j > 0; j--) {
+        if (k == triangleCount) {
+          blankSpace += ' ';
+        } else {
+          blankSpace += '  ';
+        }
+      }
+
+      number = 1;
+      for (int j = 0; j <= printCount - 2 - i; j++) {
+        blankSpace += ' $number';
+        number += 1;
+      }
+      blankSpace += '  ';
+    }
+
+    print(blankSpace);
+  }
+}
+```
+    Output :      1                 1                 1  
+                 1 2               1 2               1 2  
+                1 2 3             1 2 3             1 2 3  
+               1 2 3 4           1 2 3 4           1 2 3 4  
+              1 2 3 4 5         1 2 3 4 5         1 2 3 4 5  
+             1 2 3 4 5 6       1 2 3 4 5 6       1 2 3 4 5 6  
+            1 2 3 4 5 6 7     1 2 3 4 5 6 7     1 2 3 4 5 6 7  
+           1 2 3 4 5 6 7 8   1 2 3 4 5 6 7 8   1 2 3 4 5 6 7 8  
+            1 2 3 4 5 6 7     1 2 3 4 5 6 7     1 2 3 4 5 6 7  
+             1 2 3 4 5 6       1 2 3 4 5 6       1 2 3 4 5 6  
+              1 2 3 4 5         1 2 3 4 5         1 2 3 4 5  
+               1 2 3 4           1 2 3 4           1 2 3 4  
+                1 2 3             1 2 3             1 2 3  
+                 1 2               1 2               1 2  
+                  1                 1                 1  
