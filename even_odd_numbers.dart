@@ -1,8 +1,9 @@
 void main() {
-  int number = 100;
+  int number1 = 101;
+  int number2 = 200;
   List<int> evenNumber = [];
   List<int> oddNumber = [];
-  for (int i = 0; i < number; i++) {
+  for (int i = number1; i <= number2; i++) {
     if (i.isEven) {
       evenNumber += [i];
     }
