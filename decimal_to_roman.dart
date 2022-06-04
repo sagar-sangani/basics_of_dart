@@ -1,21 +1,5 @@
 import 'dart:math' as math;
 
-// void main() {
-//   double number = 257;
-//   List<int> reverseDigits =[];
-//   int sum = 0;
-
-//   for (var i = 0; i < number.toString().length; i++) {
-//     double reminder = number % 10;
-//     print('${reminder}');
-//     number -= reminder;
-//     number /= 10;
-//     sum += reminder.toInt();
-//      print(reverseDigits += [reminder.toInt()]);
-//   }
-//   print(sum);
-// }
-
 void main() {
   Map<int, String> romanNumber = {
     1: 'I',
@@ -100,5 +84,5 @@ void main() {
     romanDigit += romanNumber[digitsWithValue[i]].toString();
   }
 
-  print(romanDigit);
+  print('Roman Number is $romanDigit');
 }
